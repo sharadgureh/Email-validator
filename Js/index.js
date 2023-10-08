@@ -23,10 +23,10 @@ let result = {
 subtm.addEventListener("click", async (e) => {
     e.preventDefault()
     console.log("Clicked!")
-    // resultCont.innerHTML = `<img width="123" src="img/loading.svg" alt="">`
+    resultcont.innerHTML = `<img width="123" src="/project/Email-validatior/image/loading.svg" alt="">`
     let key = "ema_live_hoMBlv3MIn2tcbmfIM5moCzMIM2dlmMa6ZuZqAmy";
     let email = document.getElementById("username").value 
-    let url = `https://api.emailvalidation.io/v1/info?apikey=${key}email=${email}`;
+    let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
     let res = await fetch(url)
     let result = await res.json()
     let str = ``
@@ -35,7 +35,6 @@ subtm.addEventListener("click", async (e) => {
             str = str + `<div>${key}: ${result[key]}</div>`
         }
     }
-
-    // console.log(str)
+    console.log(str)
     resultcont.innerHTML = str
 })
