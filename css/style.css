@@ -89,6 +89,14 @@ width: 120px; padding: 10px;
     text-transform: uppercase;
 }
 
+.container2 h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    width: 800px;
+    height: 80px;
+}
+
 @media only screen and (max-width:600px) {
     body{
         background-color: beige ;
