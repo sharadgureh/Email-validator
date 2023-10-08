@@ -37,4 +37,14 @@ subtm.addEventListener("click", async (e) => {
     }
     console.log(str)
     resultcont.innerHTML = str
+
+    // if(result["smtp_check"]==false){
+    //     let massge="Can't send a mail at this email address"
+    //     resultcont.innerHTML=massge
+        
+    // }else{
+    //     let massge="you can send a mail at this email address"
+    //     resultcont.innerHTML=massge
+        
+    // }
 })
