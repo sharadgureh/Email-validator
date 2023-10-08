@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width:auto;
+    display: flex;
+    border: solid black 3px;
+    background-color: black;
+    padding: 3px 2px;
+    justify-content: space-evenly;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    display: flex;
+    border-style: solid black 3px;
+    font: bold;
+    align-items: start;
+    list-style: none;
+    padding: 4px 11vw;
+}
+
+.logo {
+    font-size:large;
+    display: flex;
+    justify-content: center;
+}
+.emailsvg{
+width:20px; 
+padding:9px;
+}
+
+ul li a {
+    color: white;
+    text-decoration:none;
+}
+
+/* hover are use for to give a color when a cursor are came to word / text it will change it's  color*/
+ul li a:hover {
+    color:rgb(81, 77, 56);
+}
+
+main{
+    display: flex;
+    min-height: 40vw; 
+    margin: 3px; 
+    
+ }
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vh;
+    padding-top:30px;
+    padding-left: 30px;
+    height: 500px;
+ }
+footer {
+    font-size: xx-small;
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    margin: 20px;
+    justify-content: center;
+}
+.emailbox{
+width: 350px; padding: 10px;
+border-radius: 30px;
+margin-bottom: 9px;
+
+}
+.submitbutton{
+border: solid black white;
+color: black;
+border-radius: 30px;
+border-bottom-style:ridge ;
+
+width: 120px; padding: 10px;
+}
+#resultcont div:first-letter{
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:600px) {
+    body{
+        background-color: beige ;
+    }
+    .container{
+        font-size: 12px;
+    }
+    .emailbox{
+        width: 228px;
+        padding: 3px;
+    }
+    .submitbutton{
+        width: 80px;
+        padding: 5px;
+        border-radius: 35px;
+    }
+}
