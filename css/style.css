@@ -63,7 +63,7 @@ main{
     height: 500px;
  }
 footer {
-    font-size: xx-small;
+    font-size:x-small;
     display: flex;
     background-color: black;
     color: white;
