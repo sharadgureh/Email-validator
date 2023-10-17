@@ -29,16 +29,16 @@ subtm.addEventListener("click", async (e) => {
     let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
     let res = await fetch(url)
     let result = await res.json()
-    let str = ``
+    let tableHTML = `<table>`;
+        
     for (key of Object.keys(result)) {
-        if(result[key] !== "" && result[key]!== " "){ 
-            str = str + `<div>${key}: ${result[key]}</div>`
+        if (result[key] !== "" && result[key] !== " ") {
+            tableHTML += `<tr><td>${key}</td<td>${result[key]}</td></tr>`;
         }
     }
-    console.log(str)
-    resultcont.innerHTML = str
-
-    // if(result["smtp_check"]==false){
+    
+    tableHTML += `</table>`;
+    resultcont.innerHTML = tableHTML;    // if(result["smtp_check"]==false){
     //     let massge="Can't send a mail at this email address"
     //     resultcont.innerHTML=massge
         
