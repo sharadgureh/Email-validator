@@ -85,6 +85,7 @@ border-bottom-style:ridge ;
 
 width: 120px; padding: 10px;
 }
+
 #resultcont div:first-letter{
     text-transform: uppercase;
 }
