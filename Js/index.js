@@ -23,8 +23,8 @@ let result = {
 subtm.addEventListener("click", async (e) => {
     e.preventDefault()
     console.log("Clicked!")
-    resultcont.innerHTML = `<img width="123" src="C:\Users\infar\Desktop\desktop\work\website\project\Email-validator\image\loading.svg" alt="">`
-    let key = "ema_live_hoMBlv3MIn2tcbmfIM5moCzMIM2dlmMa6ZuZqAmy";
+    resultcont.innerHTML = `<img width="123" src="image/loading.svg" alt="">`
+    let key = "ema_live_G1B7Seg639rOFXSUUJQk5mqV3h9JciA1cgPeWD3o";
     let email = document.getElementById("username").value 
     let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
     let res = await fetch(url)
@@ -38,7 +38,17 @@ subtm.addEventListener("click", async (e) => {
     }
     
     tableHTML += `</table>`;
-    resultcont.innerHTML = tableHTML;  
+    resultcont.innerHTML = tableHTML;
+    if (result.smtp_check==true) {
+        setTimeout(() => {
+            alert("you can send mail on this email")
+        }, 3000);
+    }else
+    {
+        setTimeout(() => {
+            alert("you can't send mail on this email")
+        }, 3000);
+    }
     
     // if(result["smtp_check"]==false){
     //     let massge="Can't send a mail at this email address"
